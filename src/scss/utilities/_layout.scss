@@ -41,7 +41,7 @@ section{
   display: flex;
   padding-inline: 64px;
   flex-direction: row;
-  overflow-x: hidden;
+  overflow: hidden;
   @include respondsive(xl) {
     padding-inline: 40px;
   }
