@@ -1,0 +1,227 @@
+.section{
+    &-studio{
+        padding-block: 120px;
+        flex-direction: column;  
+        @include respondsive(md) {
+			padding-block: 60px;
+		} 
+        .content{
+            width: 100%;
+            &-title{
+                @include flex(row, center, center);
+                width: 100%;
+                &-text{
+                    color: $black;
+                    @include flex(row, center, center);
+                    gap: 24px;
+                    color: $black;
+                    font-size: 100px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 101.9px; /* 101.9% */
+                    @include respondsive(xl) {
+                        font-size: 72px;
+                    }
+                    @include respondsive(sm) {
+                        font-size: 34px;
+                        gap: 14px;
+                    }
+                    .thunder{
+                        &-small{
+                            max-width: 48px;
+                            width: 100%;
+                            @include respondsive(xl) {
+                                max-width: 38px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 20px;
+                            }
+                            &-1{
+                                transform: rotateX(0deg) rotateY(179deg);
+                                transform-style: preserve-3d;
+                                animation: thunder-small1 2s linear 0s infinite normal forwards;
+                                @keyframes thunder-small1 {
+                                    0% {
+                                        animation-timing-function: ease-in;
+                                        opacity: 1;
+                                        transform: translateX(-48px);
+                                    }
+                                
+                                    24% {
+                                        opacity: 1;
+                                    }
+                                
+                                    40% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(-26px);
+                                    }
+                                
+                                    65% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(-13px);
+                                    }
+                                
+                                    82% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(-6.5px);
+                                    }
+                                
+                                    93% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(-4px);
+                                    }
+                                
+                                    25%,
+                                    55%,
+                                    75%,
+                                    87%,
+                                    98% {
+                                        animation-timing-function: ease-out;
+                                        transform: translateX(0px);
+                                    }
+                                
+                                    100% {
+                                        animation-timing-function: ease-out;
+                                        opacity: 1;
+                                        transform: translateX(0px);
+                                    }
+                                }
+                            }
+                            &-2{
+                                transform: rotate(0);
+                                animation: thunder-small2 2s linear 0s infinite normal forwards;
+                                @keyframes thunder-small2 {
+                                    0% {
+                                        animation-timing-function: ease-in;
+                                        opacity: 1;
+                                        transform: translateX(48px);
+                                    }
+                                
+                                    24% {
+                                        opacity: 1;
+                                    }
+                                
+                                    40% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(26px);
+                                    }
+                                
+                                    65% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(13px);
+                                    }
+                                
+                                    82% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(6.5px);
+                                    }
+                                
+                                    93% {
+                                        animation-timing-function: ease-in;
+                                        transform: translateX(4px);
+                                    }
+                                
+                                    25%,
+                                    55%,
+                                    75%,
+                                    87%,
+                                    98% {
+                                        animation-timing-function: ease-out;
+                                        transform: translateX(0px);
+                                    }
+                                
+                                    100% {
+                                        animation-timing-function: ease-out;
+                                        opacity: 1;
+                                        transform: translateX(0px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .content-studio{
+            margin: auto;
+            margin-top: 64px;
+            width: 100%;
+            max-width: 1500px;
+            overflow: hidden;
+            @include flex(column, center, center);
+            gap: 24px;
+            @include respondsive(md) {
+                margin-top: 32px;
+            }
+            &-running{
+                @include flex(row, center, center !important);
+                gap: 24px;
+                width: 2000px;
+                transform: translateX(100%);
+                animation: runstudio 20s linear infinite;
+                @include respondsive(md) {
+                    animation: runstudio 30s linear infinite;
+                }
+                @keyframes runstudio {
+                    from {
+                    transform: translateX(100%);
+                    }
+                    to {
+                    transform: translateX(-100%);
+                    }
+                };
+                .running{
+                    &-wrapper{
+                        @include flex(row, center, center);
+                        width: auto;
+                        gap: 24px;
+                        img {
+                            width: 644px;
+                        }
+                        @include respondsive(xl) {
+                            img {
+                                width: 444px;
+                            }
+                        }
+                        @include respondsive(md) {
+                            img {
+                                width: 374px;
+                            }
+                        }
+                        @include respondsive(sm) {
+                            img {
+                                width: 334px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-reverse{
+                @include flex(row, center, center !important);
+                gap: 24px;
+                transform: translateX(-100%);
+                animation: runreverse 20s linear infinite;
+                @include respondsive(md) {
+                    animation: runreverse 30s linear infinite;
+                }
+                @keyframes runreverse {
+                    from {
+                    transform: translateX(-100%);
+                    }
+                    to {
+                    transform: translateX(100%);
+                    }
+                };
+                .running{
+                    &-wrapper{
+                        @include flex(row, center, center);
+                        width: auto;
+                        gap: 24px;
+                        
+                    }
+                }
+            }
+        }
+    
+    }
+}

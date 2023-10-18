@@ -1,0 +1,281 @@
+.section-header{
+    padding-block: 100px;
+    @include respondsive(md) {
+        padding-block: 50px;
+    }
+    .container{
+        &-header{
+            padding-block: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+            @include respondsive(md) {
+                padding-block: 40px;
+            }
+            @include respondsive(sm) {
+                gap: 50px;
+            }
+            .head-content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                @include respondsive(md) {
+                    flex-direction: column;
+                    gap: 40px;
+                }
+                @include respondsive(sm) {
+                    gap: 16px;
+                }
+                .subtext{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 140px;
+                    @include respondsive(xl) {
+                        gap: 0;
+                        height: 100%;
+                    }
+                    @include respondsive(md) {
+                        gap: 16px;
+                    }
+                    &-image{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: center;
+                        gap: 10px;
+                        img {
+                            max-width: 53px;
+                            width: 100%;
+                            @include respondsive(xl) {
+                                max-width: 43px;
+                            }
+                            @include respondsive(md) {
+                                max-width: 34px;
+                            }
+                        }
+                        .elipse{
+                            border-radius: 120px;
+                            border: 2.5px solid #181818;
+                            width: 94px;
+                            height: 53px;
+                            flex-shrink: 0;
+                            @include respondsive(xl) {
+                                width: 84px;
+                                height: 43px;
+                            }
+                            @include respondsive(md) {
+                                width: 74px;
+                                height: 34px;
+                            }
+                        }
+                    }
+                    &-text{
+                        &-span{
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                        }
+                        &-desc{
+                            margin-top: 12px;
+                            color: $subtext;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 170%; /* 34px */
+                            max-width: 310px;
+                            width: 100%;
+                        }
+                    }
+                }
+                .display{
+                    &-text{
+                        color: $black;
+                        font-size: 100px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        @include respondsive(xl) {
+                            font-size: 72px;
+                        }
+                        @include respondsive(sm) {
+                            font-size: 34px;
+                        }
+                    }
+                    .vinyl{
+                        max-width: 61px;
+                        width: 100%;
+                        animation: vinyl 9s linear 0s infinite normal forwards;
+                        @include respondsive(xl) {
+                            max-width: 51px;
+                        }
+                        @include respondsive(md) {
+                            max-width: 41px;
+                        }
+                        @include respondsive(sm) {
+                            max-width: 24px;
+                        }
+                        @keyframes vinyl {
+                            0% {
+                                transform: rotate(0);
+                            }
+                        
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                    .thunder{
+                        max-width: 47px;
+                        width: 100%;
+                        animation: thunder 2s linear 0s infinite normal forwards;
+                        @include respondsive(xl) {
+                            max-width: 37px;
+                        }
+                        @include respondsive(md) {
+                            max-width: 27px;
+                        }
+                        @include respondsive(sm) {
+                            max-width: 17px;
+                        }
+                        @keyframes thunder {
+                            0%,
+                            100% {
+                                transform: translateX(0%);
+                                transform-origin: 50% 50%;
+                            }
+                        
+                            15% {
+                                transform: translateX(-10px) rotate(-6deg);
+                            }
+                        
+                            30% {
+                                transform: translateX(5px) rotate(6deg);
+                            }
+                        
+                            45% {
+                                transform: translateX(-5px) rotate(-3.6deg);
+                            }
+                        
+                            60% {
+                                transform: translateX(6px) rotate(2.4deg);
+                            }
+                        
+                            75% {
+                                transform: translateX(-6px) rotate(-1.2deg);
+                            }
+                        }
+                    }
+                }
+            }
+            .body-content{
+                &-image{
+                    position: relative;
+                    .image{
+                        &-background{
+                            width: 100%;
+                        }
+                        &-float{
+                            &-top{
+                                max-width: 200px;
+                                width: 100%;
+                                position: absolute;
+                                top: -100px;
+                                left: 220px;
+                                animation: rolling 9s linear 0s infinite normal forwards;
+                                @include respondsive(xl) {
+                                    max-width: 150px;
+                                    top: -75px;
+                                    left: 195px;
+                                }
+                                @include respondsive(md) {
+                                    max-width: 120px;
+                                    top: -60px;
+                                    left: 115px;
+                                }
+                                @include respondsive(sm) {
+                                    max-width: 60px;
+                                    top: -30px;
+                                    left: 56px;
+                                }
+                                @keyframes rolling {
+                                    0% {
+                                        transform: rotate(0);
+                                    }
+                                
+                                    100% {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+                            &-left{
+                                position: absolute;
+                                max-width: 307px;
+                                width: 100%;
+                                top: 83px;
+                                left: 48px;
+                                @include respondsive(xl) {
+                                    max-width: 215px;
+                                    top: 67px;
+                                }
+                                @include respondsive(md) {
+                                    max-width: 160px;
+                                    top: 46px;
+                                    left: 28px;
+                                }
+                                @include respondsive(sm) {
+                                    max-width: 66px;
+                                    top: 22px;
+                                    left: 16px;
+
+                                }
+                            }
+                            &-rightTop{
+                                position: absolute;
+                                top: 56px;
+                                right: 56px;
+                                max-width: 110px;
+                                width: 100%;
+                                @include respondsive(xl) {
+                                    max-width: 85px;
+                                }
+                                @include respondsive(md) {
+                                    max-width: 64px;
+                                    top: 40px;
+                                    right: 40px;
+                                }
+                                @include respondsive(sm) {
+                                    max-width: 28px;
+                                    top: 20px;
+                                    right: 20px;
+                                }
+                            }
+                            &-leftBottom{
+                                position: absolute;
+                                bottom: 56px;
+                                right: 56px;
+                                max-width: 141px;
+                                width: 100%;
+                                @include respondsive(xl) {
+                                    max-width: 111px;
+                                }
+                                @include respondsive(md) {
+                                    max-width: 82px;
+                                    bottom: 40px;
+                                    right: 40px;
+                                }
+                                @include respondsive(sm) {
+                                    max-width: 38px;
+                                    bottom: 20px;
+                                    right: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

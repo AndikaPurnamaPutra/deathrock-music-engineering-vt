@@ -1,0 +1,202 @@
+.section{
+    &-footer{
+            background-color: $black;
+            padding-block: 120px;
+            @include respondsive(md) {
+                padding-block: 60px;
+            }   
+            .content{
+                width: 100%;
+                @include flex(column, center, center);
+                gap: 80px;
+                @include respondsive(md) {
+                    gap: 40px;
+                }
+                &-display{
+                    @include flex(row, flex-start, space-between);
+                    width: 100%;
+                    @include respondsive(sm) {
+                        @include flex(column, flex-start, flex-start);
+                        gap: 24px;
+                    }
+                    &-text{
+                        color: $white;
+                        font-size: 140px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        max-width: 767px;
+                        width: 100%;
+                        img {
+                            max-width: 53px;
+                            width: 100%;
+                            @include respondsive(xl) {
+                                max-width: 34px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 24px;
+                            }
+                        }
+                        @include respondsive(xl) {
+                            font-size: 84px;
+                            max-width: 467px;
+                        }
+                        @include respondsive(sm) {
+                            font-size: 38px;
+                        }
+                    }
+                    &-subtext{
+                        @include flex(column, flex-end, space-between);
+                        gap: 220px;
+                        @include respondsive(xl) {
+                            gap: 150px;
+                        }
+                        @include respondsive(sm) {
+                            align-items: flex-start;
+                            gap: 24px;
+                            width: 100%;
+                        }
+                        .subtext{
+                            &-desc{
+                                width: 100%;
+                                max-width: 421px;
+                                color: rgba(255, 255, 255, 0.72);
+                                text-align: right;
+                                font-size: 20px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 170%; /* 34px */
+                            }
+                            &-image{
+                                @include flex(row, center, space-between);
+                                gap: 10px;
+                                img {
+                                    max-width: 53px;
+                                    width: 100%;
+                                    @include respondsive(xl) {
+                                        max-width: 43px;
+                                    }
+                                    @include respondsive(md) {
+                                        max-width: 34px;
+                                    }
+                                }
+                                .elipse{
+                                    border-radius: 120px;
+                                    border: 2.5px solid $white;
+                                    width: 94px;
+                                    height: 53px;
+                                    flex-shrink: 0;
+                                    @include respondsive(xl) {
+                                        width: 84px;
+                                        height: 43px;
+                                    }
+                                    @include respondsive(md) {
+                                        width: 74px;
+                                        height: 34px;
+                                    }
+                                }
+                            }
+                        }
+                        button{
+                            @include flex(row, center, center);
+                            text-align: center;
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: 170%; /* 47.6px */
+                            letter-spacing: 0.56px;
+                            gap: 8px;
+                            padding-inline: 40px;
+                            @include respondsive(xl) {
+                                font-size: 20px;
+                            }
+                            @include respondsive(sm) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &-menus{
+                    width: 100%;
+                    @include flex(row, center, space-between);
+                    padding-block: 64px;
+                    border-top: solid 1px #414141;
+                    @include respondsive(md) {
+                        align-items: flex-start;
+                        gap: 24px;
+                    }
+                    &-nav{
+                        @include respondsive(md) {
+                            width: 50%
+                        }
+                        ul{
+                            @include flex(row, center, space-between);
+                            gap: 40px;
+                            @include respondsive(md) {
+                                @include flex(column, flex-start, flex-start);
+                                gap: 24px;
+                            }
+                            a{
+                                color: $white;
+                                font-size: 28px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                letter-spacing: 0.28px;
+                                @include respondsive(xl) {
+                                    font-size: 20px
+                                }
+                            }
+                        }
+                    }
+                    &-socialmedia{
+                        @include respondsive(md) {
+                            width: 50%
+                        }
+                        ul{
+                            @include flex(row, center, space-between);
+                            gap: 40px;
+                            @include respondsive(md) {
+                                @include flex(column, flex-start, flex-start);
+                                gap: 24px;
+                            }
+                            a{
+                                color: $white;
+                                font-size: 28px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                letter-spacing: 0.28px;
+                                @include respondsive(xl) {
+                                    font-size: 20px
+                                }
+                            }
+                        }
+                    }
+                }
+                &-mark{
+                    width: 100%;
+                    margin-top: -80px;
+                    &-text{
+                        width: 100%;
+                        @include flex(row, center, space-between);
+                        @include respondsive(sm) {
+                            @include flex(column, flex-start, flex-start);
+                            gap: 24px;
+                        }
+                        p{
+                            color: #959595;
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            letter-spacing: 0.28px;
+                            @include respondsive(xl) {
+                                font-size: 20px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

@@ -1,0 +1,21 @@
+.btn{
+    padding: 10px 20px;
+    border-color: transparent;
+    border-radius: 100px;
+    color: $black;
+    text-align: center;
+    font-family: 'Italian Plate No1 Expanded';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 170%; /* 27.2px */
+    &-secondary{
+        background-color: $secondary;
+        color: $white;
+    }
+    &-primary{
+        @extend .btn-secondary;
+        background-color: $primary;
+        color: $black;
+    }
+}

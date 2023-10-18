@@ -1,0 +1,174 @@
+.navbar {
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	transition: all 100ms ease;
+	z-index: 99;
+	&-container {
+		@extend .navbar;
+		position: unset;
+		max-width: 1440px;
+		background-color: transparent;
+	}
+	.nav {
+		justify-content: space-between;
+		padding: 24px 64px;
+		transition: all 200ms ease;
+		@include respondsive(xl) {
+			padding-inline: 40px;
+		}
+		@include respondsive(md) {
+			padding: 10px 20px;
+		}
+		&-logo {
+			display: flex;
+			a {
+				img {
+                    max-width: 191px;
+                    width: 100%;
+					vertical-align: middle;
+					@include respondsive(md) {
+                        max-width: 142px;
+					}
+                    @include respondsive(sm) {
+                        max-width: 120px;
+                    }
+				}
+			}
+		}
+		&-btn-respondsive {
+			display: none;
+			background-image: url("../../../assets/image/menu-black.svg");
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+			width: 24px;
+			height: 24px;
+			border: transparent;
+			background-color: transparent;
+			@include respondsive(md) {
+				display: block;
+				z-index: 2;
+			}
+		}
+		&-menu {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 68%;
+			@include respondsive(xl) {
+				width: 73%;
+			}
+			&-item {
+				display: flex;
+				flex-direction: row;
+				gap: 40px;
+				@include respondsive(xl) {
+					gap: 24px;
+				}
+				@include respondsive(md) {
+					flex-direction: column;
+					gap: 5px;
+					color: white;
+					width: 100%;
+					> li {
+						padding: 10px 12px;
+						width: 100%;
+						a {
+							color: $white !important;
+						}
+						button {
+							width: 100%;
+							margin-top: 80px;
+						}
+					}
+				}
+				> li {
+					padding: 8px 12px;
+					a {
+						color: black;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+			> li {
+				@include respondsive(md) {
+					margin-top: 20px;
+					width: 100%;
+				}
+				button {
+					@include respondsive(md) {
+						width: 100%;
+					}
+				}
+			}
+			@include respondsive(md) {
+				display: none;
+				flex-direction: column;
+				justify-content: start;
+				align-items: start;
+				padding: 100px 30px;
+				background-color: $black;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: -16px;
+				left: 0;
+			}
+		}
+	}
+}
+
+// .navbar {
+//     &-container {
+//         .nav {
+//             &-logo {
+//                 a {
+//                     img {
+
+//                     }
+//                 }
+//             }
+//             &-btn-respondsive {
+
+//             }
+//             &-menu {
+//                 &-item {
+
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// for button respondsive
+.active {
+	display: flex !important;
+}
+.cross {
+	background-image: url("../../../assets/image/cross-white.svg") !important;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	width: 24px;
+	height: 24px;
+}
+
+.btn-border {
+	border: 2px solid black !important;
+}
+
+//for scroll navbar
+.bg-color {
+	// height: 80px;
+	background-color: #ffd600;
+}
+// .margins{
+//     margin-top: -10px;
+// }

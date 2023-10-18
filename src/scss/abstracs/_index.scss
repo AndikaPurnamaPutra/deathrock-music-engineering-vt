@@ -1,0 +1,31 @@
+@import "root";
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    // overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html, body, button{
+    padding: 0;
+    font-family: $fontFamily;
+}
+button{
+    cursor: pointer;
+    padding: 0;
+}
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}

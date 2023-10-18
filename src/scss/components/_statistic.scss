@@ -1,0 +1,187 @@
+.section {
+	&-statistic {
+		.container {
+			&-statistic {
+				justify-content: center;
+				align-items: center;
+				padding-bottom: 100px;
+				@include respondsive(md) {
+					padding-bottom: 50px;
+				}
+				.content {
+					display: flex;
+					flex-direction: column;
+					gap: 120px;
+                    width: 100%;
+					@include respondsive(md) {
+						gap: 60px;
+					}
+					@include respondsive(sm) {
+						gap: 30px;
+					}
+					&-display {
+						color: $display2;
+						font-size: 60px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: 140%; /* 84px */
+						width: 100%;
+						max-width: 1230px;
+						text-align: center;
+                        @include respondsive(xl) {
+                            font-size: 46px;
+                        }
+                        @include respondsive(md) {
+                            font-size: 36px;
+                        }
+                        @include respondsive(sm) {
+                            font-size: 19px;
+                        }
+						.bold {
+							font-weight: 600;
+						}
+
+						.skull {
+                            max-width: 42px;
+                            width: 100%;
+							margin-top: -10px;
+							margin-inline: 10px 10px;
+							animation: skull 2s linear 0s infinite normal
+								forwards;
+                            @include respondsive(xl) {
+                                max-width: 30px;
+                            }
+                            @include respondsive(md) {
+                                max-width: 20px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 14px;
+                            }
+							@keyframes skull {
+								0% {
+									transform: translate(0);
+								}
+
+								20% {
+									transform: translate(-2px, 2px);
+								}
+
+								40% {
+									transform: translate(-2px, -2px);
+								}
+
+								60% {
+									transform: translate(2px, 2px);
+								}
+
+								80% {
+									transform: translate(2px, -2px);
+								}
+
+								100% {
+									transform: translate(0);
+								}
+							}
+						}
+						.thunder {
+                            max-width: 42px;
+                            width: 100%;
+							margin-top: -10px;
+							margin-inline: 10px 10px;
+							animation: thunder 2s linear 0s infinite normal
+								forwards;
+                            @include respondsive(xl) {
+                                max-width: 30px;
+                            }
+                            @include respondsive(md) {
+                                max-width: 20px;
+                            }
+                            @include respondsive(sm) {
+                                max-width: 14px;
+                            }
+							@keyframes thunder {
+								0%,
+								100% {
+									transform: translateX(0%);
+									transform-origin: 50% 50%;
+								}
+
+								15% {
+									transform: translateX(-30px) rotate(-6deg);
+								}
+
+								30% {
+									transform: translateX(15px) rotate(6deg);
+								}
+
+								45% {
+									transform: translateX(-15px) rotate(-3.6deg);
+								}
+
+								60% {
+									transform: translateX(9px) rotate(2.4deg);
+								}
+
+								75% {
+									transform: translateX(-6px) rotate(-1.2deg);
+								}
+							}
+						}
+					}
+					&-numbers {
+						display: flex;
+						flex-direction: row;
+						gap: 80px;
+                        @include respondsive(sm) {
+                            flex-direction: column;
+							gap: 20px;
+                        }
+						.numbers {
+							&-item {
+								@include flex(column, flex-start, center);
+                                @include respondsive(sm) {
+                                    align-items: center;
+                                }
+								&-num {
+									color: $black;
+									font-size: 140px;
+									font-style: normal;
+									font-weight: 600;
+									line-height: normal;
+									position: relative;
+									sup {
+                                        margin-left: 16px;
+										color: $primary;
+									}
+                                    @include respondsive(xl) {
+                                        font-size: 80px;
+                                    }
+                                    @include respondsive(md) {
+                                        font-size: 64px;
+                                    }
+                                    @include respondsive(sm) {
+                                        font-size: 54px;
+                                    }
+								}
+								&-desc {
+									color: $subtext;
+									font-size: 28px;
+									font-style: normal;
+									font-weight: 500;
+									line-height: normal;
+									letter-spacing: 0.28px;
+                                    @include respondsive(xl) {
+                                        font-size: 18px;
+                                    }
+                                    @include respondsive(sm) {
+                                        font-size: 16px;
+                                    }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

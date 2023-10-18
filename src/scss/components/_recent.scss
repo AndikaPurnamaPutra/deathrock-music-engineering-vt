@@ -1,0 +1,99 @@
+.section{
+    &-recent{
+        padding-block: 120px;
+        @include respondsive(md) {
+			padding-block: 60px;
+		}
+        .content{
+            width: 100%;
+            &-title{
+                @include flex(row, center, space-between);
+                width: 100%;
+                border-bottom: 2px solid black;
+                padding-block: 56px;
+                &-text{
+                    color: $black;
+                }
+                @include respondsive(sm) {
+                    @include flex(column, flex-start, flex-start);
+                    gap: 24px;
+                    padding-block: 36px;
+                    .btn-primary {
+                        width: 100%;
+                    }
+                }
+
+            }
+            &-project{
+                .project{
+                    &-tab{
+                        &-content{
+                            @include flex(row, center, center);
+                            border-bottom: 2px solid black;
+                            padding: 56px;
+                            gap: 64px;
+                            @include respondsive(md) {
+                                padding-inline: 0;
+                                @include flex(column, flex-start, flex-start);
+                                gap: 24px;
+                            }
+                            @include respondsive(sm) {
+                                padding-block: 36px;
+                            }
+                            img {
+                                max-width: 200px;
+                                width: 100%;
+                                @include respondsive(sm) {
+                                    max-width: 100%;
+                                }
+                            }
+                            &-text{
+                                @include flex(column, flex-start, flex-start);
+                                gap: 24px;
+                                width: 100%;
+                                max-width: 966px;
+                                @include respondsive(md) {
+                                    gap: 16px;
+                                }
+                                h4{
+                                    color: #ACACAC;
+                                    font-size: 28px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    letter-spacing: 0.28px;
+                                    @include respondsive(xl) {
+                                        font-size: 26px;
+                                    }
+                                    @include respondsive(md) {
+                                        font-size: 24px;
+                                    }
+                                    @include respondsive(sm) {
+                                        font-size: 22px;
+                                    }
+                                }
+                                h1{
+                                    color: #181818;
+                                    font-size: 68px;
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    line-height: normal;
+                                    @include respondsive(xl) {
+                                        font-size: 54px;
+                                    }
+                                    @include respondsive(md) {
+                                        font-size: 44px;
+                                    }
+                                    @include respondsive(sm) {
+                                        font-size: 32px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,65 @@
+// loop grid
+@use "sass:math";
+
+$grid-columns: 12;
+
+@for $i from 1 through $grid-columns {
+  .grid-#{$i} {
+    width: calc($i / $grid-columns) * 100%;
+  }
+}
+// example to html
+// .grid-6 for 50%
+// .grid-12 for 100%
+[class^='grid-'] {
+    @include respondsive(md){
+        width: 100%;
+    }
+  }
+  
+// layout for display
+section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    // .container{
+    //     width: 100%;
+    //     max-width: 1440px;
+    //     margin: auto;
+    //     display: flex;
+    //     flex-direction: row;
+    //     @include respondsive(md){
+    //         flex-direction: column;
+    //     }
+    // }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding-inline: 64px;
+  flex-direction: row;
+  overflow-x: hidden;
+  @include respondsive(xl) {
+    padding-inline: 40px;
+  }
+  @include respondsive(md){
+      flex-direction: column;
+      padding-inline: 20px;
+  }
+}
+
+
+// flex
+@mixin flex($direction, $align: null, $justify: null){
+  display: flex;
+  flex-direction: $direction;
+  @if $align{
+      align-items: $align;
+  }
+  @if $justify{
+      justify-content: $justify;
+  }
+}
