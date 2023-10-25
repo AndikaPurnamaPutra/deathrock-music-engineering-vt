@@ -93,12 +93,12 @@
                 .display{
                     &-text{
                         color: $black;
-                        font-size: 100px;
+                        font-size: 94px;
                         font-style: normal;
                         font-weight: 500;
                         line-height: normal;
                         @include respondsive(xl) {
-                            font-size: 72px;
+                            font-size: 64px;
                         }
                         @include respondsive(sm) {
                             font-size: 34px;

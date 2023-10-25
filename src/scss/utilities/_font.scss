@@ -1,14 +1,22 @@
-@font-face {
-    font-family: 'Italian Plate No1 Expanded';
-    src:  url('../../../assets/font/Italian Plate No1 Expanded.ttf');
-    src:  url('../../../assets/font/Italian Plate No1 Expanded.ttf') format('embedded-opentype'),
-      url('../../../assets/font/Italian Plate No1 Expanded.ttf') format('truetype'),
-      url('../../../assets/font/Italian Plate No1 Expanded.ttf') format('woff'),
-      url('../../../assets/font/Italian Plate No1 Expanded.ttf') format('ttf');
-  }
-
+// @font-face {
+// 	font-family: "Italian Plate No1 Expanded";
+// 	src: url("../../../assets/font/Italian Plate No1 Expanded.ttf");
+// 	src: url("../../../assets/font/Italian Plate No1 Expanded.ttf")
+// 			format("embedded-opentype"),
+// 		url("../../../assets/font/Italian Plate No1 Expanded.ttf")
+// 			format("truetype"),
+// 		url("../../../assets/font/Italian Plate No1 Expanded.ttf")
+// 			format("woff"),
+// 		url("../../../assets/font/Italian Plate No1 Expanded.ttf") format("ttf");
+// }
 
 // Font Family
+$font-display: 'Karla', sans-serif;
+
+body {
+  font-family: $font-display;
+}
+
 // $fontFamilyInter: "Inter", sans-serif;
 // $fontFamilyGilroy: "Gilroy", sans-serif;
 // $fontFamilies: (
